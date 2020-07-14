@@ -53,7 +53,7 @@ enum PomoState {
 	PomoInBreak
 };
 
-@interface Pomodoro : NSObject {
+@interface Pomodoro : NSObject<NSUserNotificationCenterDelegate> {
 
 	id delegate;
 	
@@ -80,10 +80,10 @@ enum PomoState {
 @property (nonatomic, assign) NSInteger internallyInterrupted;
 @property (nonatomic, assign, readonly) enum PomoState state;
 
-@property (nonatomic, assign) NSTimer* oneSecTimer;
-@property (nonatomic, assign) NSTimer* breakTimer;
-@property (nonatomic, assign) NSTimer* interruptionTimer;
-@property (nonatomic, retain) id delegate;
+@property (nonatomic) NSTimer* oneSecTimer;
+@property (nonatomic) NSTimer* breakTimer;
+@property (nonatomic) NSTimer* interruptionTimer;
+@property (nonatomic, strong) id delegate;
 
 - (id) initWithDuration:(NSInteger) durationTime;
 - (void) start;

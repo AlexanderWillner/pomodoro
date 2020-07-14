@@ -1,13 +1,14 @@
 --------
-Pomodoro
+Timer
 --------
 
-Pomodoro is an antiprocrastination application that helps in Getting Things Done. 
+Timer is an antiprocrastination application that helps in Getting Things Done. 
 It is a simple but effective way to manage your time and to boost your productivity to higher levels. 
 Can be used for programming, studying, writing, cooking or simply concentrating on something important.
  
-You can find more informations on the Pomodoro Technique on http://www.pomodorotechnique.com/
-Updates, source code, new releases, manual and fixes on http://martakostova.github.io/pomodoro
+It's inspired by the Pomodoro Technique (http://www.pomodorotechnique.com/)
+
+Updates, source code, new releases, manual and fixes on http://martakostova.github.io/timer
 
 ----------
 Developers
@@ -20,11 +21,11 @@ Developed by Ugo Landini and Pascal Bihler
 License
 -------
 This code is released under BSD license (see License.txt for details) and contains other OSS BSD licensed code:
+
 BGHud Appkit: http://code.google.com/p/bghudappkit/
 
 This software contains Waffle Software licensed code:
 Shortcut Recorder: http://wafflesoftware.net/shortcut/
-
 
 Sound samples come from http://www.freesound.org and are licensed under Creative Commons http://creativecommons.org/licenses/sampling+/1.0/
 
@@ -32,6 +33,9 @@ Sound samples come from http://www.freesound.org and are licensed under Creative
 Building notes
 --------------
 
+Open Timer.xcodeproj once with XCode, then run "make clean no-sig timer" from the command line.
+
+OR
 
 1) Remove Code signing identity if present (should not, but sometimes I push it back)
 

@@ -26,13 +26,11 @@
 #import <Foundation/Foundation.h>
 #import "CommonController.h"
 
-@class GrowlNotifier;
 
 @interface GrowlController : CommonController {
  
-    IBOutlet GrowlNotifier* growl;
-	IBOutlet NSComboBox* growlEveryCombo;
-	IBOutlet NSImageView* growlStatus;
+	IBOutlet NSComboBox* __unsafe_unretained growlEveryCombo;
+	IBOutlet NSImageView* __unsafe_unretained growlStatus;
 
     NSImage* redButtonImage;
 	NSImage* greenButtonImage;
@@ -41,8 +39,7 @@
     id userNotificationCenter;
 }
 
-@property (assign) IBOutlet GrowlNotifier* growl;
-@property (assign) IBOutlet NSComboBox* growlEveryCombo;
-@property (assign) IBOutlet NSImageView* growlStatus;
+@property (unsafe_unretained) IBOutlet NSComboBox* growlEveryCombo;
+@property (unsafe_unretained) IBOutlet NSImageView* growlStatus;
 
 @end
